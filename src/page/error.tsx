@@ -1,5 +1,10 @@
-const error = () => {
-  return <div>error</div>;
+const Error = () => {
+  return (
+    <div className="md:hidden">
+      404 Error <br />
+      Page Not Found!
+    </div>
+  );
 };
 
-export default error;
+export default Error;
