@@ -45,9 +45,9 @@ const ProductTour = ({
         <p className="w-[40ch] px-1 text-xs leading-5 tracking-[0.36px] text-[#292929]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
         </p>
-        <div className="pt-9">
+        <div className="pt-9 flex items-center justify-center">
           <LazyLoadImage
-            className="w-full"
+            width="100%"
             src={splashImage}
             placeholderSrc={PlaceholderImage}
             effect="blur"

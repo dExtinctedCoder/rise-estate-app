@@ -18,6 +18,8 @@ const LoginOption = () => {
       <div className="grid grid-cols-2 gap-2">
         <div>
           <LazyLoadImage
+            width="100%"
+            className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect8}
             alt="modern house"
@@ -25,6 +27,8 @@ const LoginOption = () => {
         </div>
         <div>
           <LazyLoadImage
+            width="100%"
+            className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect9}
             alt="modern house"
@@ -32,6 +36,8 @@ const LoginOption = () => {
         </div>
         <div>
           <LazyLoadImage
+            width="100%"
+            className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect10}
             alt="modern house"
@@ -39,6 +45,8 @@ const LoginOption = () => {
         </div>
         <div>
           <LazyLoadImage
+            width="100%"
+            className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect11}
             alt="modern house"
