@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Rise from "../../../public/rise.png";
 import Button from "../../component/button";
-import DesktopWarning from "../../component/desktopWarning";
 
 interface ProductTour {
   splashImage: string;
