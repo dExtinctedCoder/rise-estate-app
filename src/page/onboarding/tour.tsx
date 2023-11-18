@@ -47,7 +47,7 @@ const Tour = ({ index }: TourProps) => {
           progress={100}
           splashImage={OnboardingImageEight}
           strongText="perfect choice"
-          linkTo="/login"
+          linkTo="/login/option"
           backLink="/onboarding-tour-two"
           key={3}
         />
