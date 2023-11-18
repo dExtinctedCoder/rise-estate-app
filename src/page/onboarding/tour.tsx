@@ -2,7 +2,9 @@ import ProductTour from "./productTour";
 import OnboardingImageSix from "../../assets/images/onboarding-rectangle-6.png";
 import OnboardingImageSeven from "../../assets/images/onboarding-rectangle-7.png";
 import OnboardingImageEight from "../../assets/images/onboarding-rectangle-8.png";
-import Error from "../error";
+import { lazy } from "react";
+const Error = lazy(() => import("../error"));
+
 interface TourProps {
   index: number;
 }

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import Rise from "../../../public/rise.png";
 import Button from "../../component/button";
+import PlaceholderImage from "../../assets/images/grey.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface ProductTour {
   splashImage: string;
@@ -25,7 +28,7 @@ const ProductTour = ({
 }: ProductTour) => {
   return (
     <>
-      <div className="px-[10px] pt-[19px] pb-[10px] md:hidden">
+      <div className="px-[10px] pt-[19px] pb-[10px] min-h-screen relative md:hidden">
         <div className="flex items-center justify-between pb-8">
           <img src={Rise} alt="rise.png" width="80" />
           <Link
@@ -42,10 +45,12 @@ const ProductTour = ({
         <p className="w-[40ch] px-1 text-xs leading-5 tracking-[0.36px] text-[#292929]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
         </p>
-        <div className="pt-9 relative">
-          <img
+        <div className="pt-9">
+          <LazyLoadImage
             className="w-full"
             src={splashImage}
+            placeholderSrc={PlaceholderImage}
+            effect="blur"
             alt="onboarding-rectangle-6.png"
           />
           <input
@@ -70,7 +75,6 @@ const ProductTour = ({
           </div>
         </div>
       </div>
-      {/* <DesktopWarning /> */}
     </>
   );
 };

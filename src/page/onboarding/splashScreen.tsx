@@ -2,11 +2,12 @@ import OnboardingImgThree from "../../assets/images/onboarding-image-3.png";
 import Rise from "../../../public/rise.png";
 import Button from "../../component/button";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const splashScreen = () => {
   return (
     <div className="text-white fader h-screen relative flex flex-col items-center justify-center md:hidden">
-      <img
+      <LazyLoadImage
         className="absolute w-full h-full blur-bg"
         src={OnboardingImgThree}
         alt="onboarding-image-3.png"
