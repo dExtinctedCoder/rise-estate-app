@@ -5,6 +5,7 @@ import LoginRect9 from "../../assets/images/login-rectangle-9.png";
 import LoginRect10 from "../../assets/images/login-rectangle-10.png";
 import LoginRect11 from "../../assets/images/login-rectangle-11.png";
 import Placeholder from "../../assets/images/grey.jpg";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   EmailIconSm,
@@ -19,6 +20,7 @@ const LoginOption = () => {
         <div>
           <LazyLoadImage
             width="100%"
+            effect="blur"
             className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect8}
@@ -28,6 +30,7 @@ const LoginOption = () => {
         <div>
           <LazyLoadImage
             width="100%"
+            effect="blur"
             className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect9}
@@ -37,6 +40,7 @@ const LoginOption = () => {
         <div>
           <LazyLoadImage
             width="100%"
+            effect="blur"
             className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect10}
@@ -46,6 +50,7 @@ const LoginOption = () => {
         <div>
           <LazyLoadImage
             width="100%"
+            effect="blur"
             className="max-w-[250px]"
             placeholderSrc={Placeholder}
             src={LoginRect11}
