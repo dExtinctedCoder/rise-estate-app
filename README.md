@@ -1,6 +1,6 @@
 # Rise Real Estate App
 
-![Rise Real Estate App Logo](link_to_logo.png)
+![Rise Real Estate App Logo](public/rise.png)
 
 ## Overview
 
