@@ -1,9 +1,11 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Routes, Route } from "react-router-dom";
-import SplashScreen from "./page/onboarding/splashScreen.tsx";
-import Error from "./page/error.tsx";
-import Tour from "./page/onboarding/tour.tsx";
-import DesktopWarning from "./component/desktopWarning.tsx";
+import { lazy, Suspense } from "react";
+const SplashScreen = lazy(() => import("./page/onboarding/splashScreen.tsx"));
+const Error = lazy(() => import("./page/error.tsx"));
+const Loading = lazy(() => import("./page/loading.tsx"));
+const Tour = lazy(() => import("./page/onboarding/tour.tsx"));
+const DesktopWarning = lazy(() => import("./component/desktopWarning.tsx"));
 
 const queryCient = new QueryClient();
 
@@ -11,14 +13,16 @@ function App() {
   return (
     <QueryClientProvider client={queryCient}>
       <div className="app bg-white">
-        <Routes>
-          <Route path="/" element={<SplashScreen />} />
-          <Route path="*" element={<Error />} />
-          <Route path="/onboarding-tour-one" element={<Tour index={1} />} />
-          <Route path="/onboarding-tour-two" element={<Tour index={2} />} />
-          <Route path="/onboarding-tour-three" element={<Tour index={3} />} />
-        </Routes>
-        <DesktopWarning />
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<SplashScreen />} />
+            <Route path="*" element={<Error />} />
+            <Route path="/onboarding-tour-one" element={<Tour index={1} />} />
+            <Route path="/onboarding-tour-two" element={<Tour index={2} />} />
+            <Route path="/onboarding-tour-three" element={<Tour index={3} />} />
+          </Routes>
+          <DesktopWarning />
+        </Suspense>
       </div>
     </QueryClientProvider>
   );
